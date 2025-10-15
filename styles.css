@@ -155,3 +155,16 @@ img.logo {
     width: 250px;
     height: auto;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #181926;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 2px solid #363a4f;
+  font-size: 14px;
+}
