@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+<link rel="stylesheet" href="styles.css">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>LogicPath - User Stories</title>
+    <meta name="author" content="Team Emerald" />
+    <meta name="description" content="User Stories" />
+  </head>
+
+  <body style="color: rgba(255, 255, 255, 0.947);">
+
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="team_info.html">Team Bios</a>
+      <a href="presentations.html">Presentations</a>
+      <a href="references.html">References</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="user_stories.html">User Stories</a>
+    </div>
+
+    <h1>User Stories</h1>
+
+    <h2>User Roles</h2>
+    <ul class="glossary-list">
+        <li class="glossary-item">
+            <b>Free User:</b> Creates account and selects initial skill level. Access to core and interactive learning modules. Tracks progress, streaks, and basic achievements.
+        </li>
+        <li class="glossary-item">
+            <b>Premium Learner:</b> Individual subscriber with all Free User capabilities plus access to relevant real-world reasoning exercises and advanced analytics.
+        </li>
+        <li class="glossary-item">
+            <b>Educator/Instructor:</b> Assigns modules and tracks student progress. Creates custom logic problems and identifies struggling students through performance dashboards.
+        </li>
+        <li class="glossary-item">
+            <b>Institutional Administrator:</b> Manages bulk licenses for schools/universities. Oversees multiple educator accounts and accesses institution-wide analytics.
+        </li>
+    </ul>
+
+    <h2>User Story 1: Adaptive Learning Path</h2>
+    <p><b>As a</b> learner (free or premium), <b>I want to</b> progress through logic modules with adaptive difficulty, <b>so that</b> I can learn at my own pace and be appropriately challenged.</p>
+    
+    <h3>Acceptance Criteria</h3>
+    <ul class="glossary-list">
+        <li class="glossary-item">User views module content with visual aids</li>
+        <li class="glossary-item">Completes exercises with immediate feedback</li>
+        <li class="glossary-item">Difficulty adjusts based on performance</li>
+        <li class="glossary-item">Earns XP and maintains streak</li>
+    </ul>
+
+    <h3>Implementation Trace</h3>
+    <ul class="glossary-list">
+        <li class="glossary-item"><b>Features:</b> Learning Module Engine, Gamification, Adaptive Learning UI</li>
+        <li class="glossary-item"><b>UI:</b> Module Viewer → Exercise Screen → Dashboard</li>
+        <li class="glossary-item"><b>Algorithms:</b> Adaptive Difficulty, XP Calculation, Streak Tracking</li>
+        <li class="glossary-item"><b>DB:</b> READ modules, exercises | CREATE user_exercise_attempts | UPDATE user_progress, user_achievements</li>
+    </ul>
+
+    <h2>User Story 2: Real-World Reasoning Exercises</h2>
+    <p><b>As a</b> premium subscriber, <b>I want to</b> access logic exercises based on current events, <b>so that</b> I can apply logic to relevant and practical situations.</p>
+    
+    <h3>Acceptance Criteria</h3>
+    <ul class="glossary-list">
+        <li class="glossary-item">User subscribes via payment ($24.99/year)</li>
+        <li class="glossary-item">Premium exercises accessible only to subscribers</li>
+        <li class="glossary-item">Content updated regularly</li>
+        <li class="glossary-item">Enhanced analytics available</li>
+    </ul>
+
+    <h3>Implementation Trace</h3>
+    <ul class="glossary-list">
+        <li class="glossary-item"><b>Features:</b> Payments, Real-World Reasoning, Analytics</li>
+        <li class="glossary-item"><b>UI:</b> Subscription Page → Premium Exercise Library → Analytics Dashboard</li>
+        <li class="glossary-item"><b>Algorithms:</b> Payment Processing, Analytics/Scoring</li>
+        <li class="glossary-item"><b>DB:</b> UPDATE user_profile (subscription_tier) | CREATE subscription_payments | READ exercises (premium=true)</li>
+    </ul>
+
+    <h2>User Story 3: Class Management and Student Tracking</h2>
+    <p><b>As an</b> educator, <b>I want to</b> create a class, assign modules, and view student performance, <b>so that</b> I can guide learning and identify struggling students.</p>
+    
+    <h3>Acceptance Criteria</h3>
+    <ul class="glossary-list">
+        <li class="glossary-item">Creates class with enrollment code</li>
+        <li class="glossary-item">Assigns modules with due dates</li>
+        <li class="glossary-item">Views progress reports (completion %, accuracy)</li>
+        <li class="glossary-item">Exports reports as CSV/PDF</li>
+        <li class="glossary-item">Students receive assignment notifications</li>
+    </ul>
+
+    <h3>Implementation Trace</h3>
+    <ul class="glossary-list">
+        <li class="glossary-item"><b>Features:</b> Class Management, Assignment Management, Progress Tracking</li>
+        <li class="glossary-item"><b>UI:</b> Create Class Form → Assign Modules → Class Progress Dashboard</li>
+        <li class="glossary-item"><b>Algorithms:</b> Progress Report Generation, Notification Scheduling</li>
+        <li class="glossary-item"><b>DB:</b> CREATE classes, class_assignments, notifications | READ user_progress</li>
+    </ul>
+
+  </body>
+</html>
